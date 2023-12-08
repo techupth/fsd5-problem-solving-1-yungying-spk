@@ -2,7 +2,17 @@
 
 const isPalindrome = function (s) {
   //Start Coding here
+ let regesentenceOriginal = /[^a-zA-Z0-9]/g
+ let sentenceOriginal=s.replace(regesentenceOriginal,"").toLowerCase();
+  console.log(sentenceOriginal)
+  let reverseSentence = sentenceOriginal.split("").reverse().join("")
+  console.log(reverseSentence)
+  return sentenceOriginal === reverseSentence ? true:false
 };
+ 
+ 
+
+
 
 const result1 = isPalindrome("A man, a plan, a canal: Panama");
 const result2 = isPalindrome("race a car");
